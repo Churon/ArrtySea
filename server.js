@@ -38,7 +38,7 @@ io.sockets.on('connection', function (socket) {
 	// wenn ein Benutzer einen Text sendet
 	socket.on('chat', function (data) {
 		// hier wird der Text an alle anderen Benutzer gesendet
-		io.sockets.emit('chat', { zeit: new Date(), name: data.name || 'Anonym', text: data.text });
+		io.sockets.emit('chat', { zeit: new Date(), name: data.name || 'System:', name: data.name, text: data.text });
 	});
 });
 

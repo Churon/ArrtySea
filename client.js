@@ -30,6 +30,8 @@ $(document).ready(function(){
         name = $('#name').val();
 		$('#name').val('');
         $('#name').attr("placeholder","Schreib etwas...");
+	       socket.emit('chat', { zeit: new Date(), name: 'System' , text: name + ' hat den Chat betreten' });
+
         }
         
                   
