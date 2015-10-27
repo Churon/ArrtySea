@@ -1,0 +1,38 @@
+
+
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <title>EasyRTC Demo: Audio and Video</title>
+        <link rel="stylesheet" type="text/css" href="css/easyrtc.css" />
+        <link rel="stylesheet" type="text/css" href="css/video.css" />
+          
+     
+        <!-- Assumes global locations for socket.io.js and easyrtc.js -->
+        <script src="/socket.io/socket.io.js"></script>
+        <script type="text/javascript" src="js/easyrtc.js"></script>
+         
+        <script type="text/javascript" src="js/demo_audio_video.js"></script>
+         
+        
+     
+       </head>
+ <body onload="connect();">
+        <div id="demoContainer">
+          <div id="connectControls">
+            <div id="iam">Not yet connected...</div>
+            <br />
+            <strong>Connected users:</strong>
+            <div id="otherClientsV"></div>
+          </div>
+          <div id="videos">
+            <video autoplay="autoplay" class="easyrtcMirror" id="selfVideo" muted="muted" volume="0" ></video>
+            <div style="position:relative;float:left;">
+            <video autoplay="autoplay" id="callerVideo"></video>
+            </div>
+            <!-- each caller video needs to be in it"s own div so it"s close button can be positioned correctly-->
+          </div>
+        </div>
+    
+  </body>
+</html>

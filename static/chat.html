@@ -1,0 +1,33 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <title>EasyRTC Demo: Audio and Video</title>
+        <link rel="stylesheet" type="text/css" href="css/easyrtc.css" />
+     
+        <!-- Assumes global locations for socket.io.js and easyrtc.js -->
+        <script src="/socket.io/socket.io.js"></script>
+        <script type="text/javascript" src="js/easyrtc.js"></script>3
+          <script type="text/javascript" src="js/demo_instant_messaging2"></script>
+
+         
+      
+        
+     
+       </head>
+ <body onload="connect();">
+   
+      <!--VideoBereich-->
+              <div id="sendMessageArea">
+          <div id="iam">Obtaining ID...</div>
+          <textarea id="sendMessageText"></textarea>
+          <div id="otherClients"></div>
+        </div>
+        <div id="receiveMessageArea">
+          Received Messages:
+          <div id="conversation"></div>
+        </div>
+      
+      
+  </body>
+</html>

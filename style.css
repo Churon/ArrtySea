@@ -1,33 +1,185 @@
-body{
-	margin: 0;
-	padding: 0;
-	font: 16px "Comic Sans MS";
-	color: #333;
-    background-color: #ffffff
-        
-        
-            .videoContainer {
-                position: relative;
-                width: 200px;
-                height: 150px;
-            }
-            .videoContainer video {
-                position: absolute;
-                width: 100%;
-                height: 100%;
-            }
-            .volume_bar {
-                position: absolute;
-                width: 5px;
-                height: 0px;
-                right: 0px;
-                bottom: 0px;
-                background-color: #12acef;
-            }
-        
-        
+/* Allgemeiner Style */ 
+body {
+	background-image: url(images/rigging.jpg);
+    background-color: rgba(51, 51, 51, 0.96);
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-repeat: no-repeat;
+	font-size:100%;
+	margin:0em;
+	padding:0em;
 }
-header, footer{
+
+
+
+h2 {
+	font-size:1.563em;
+	line-height:1.8em;
+	font-family:Helvetica;
+	font-weight:100;
+	color:#2F2D2C;
+	margin:0em;
+	padding: 1.25em;
+	text-align:center;
+}
+
+
+p {
+	line-height:1.25em;
+	font-family:Helvetica;
+	font-weight:100;
+	color:#2F2D2C;
+	margin:0em;
+	padding:1.25em;
+
+}
+
+ul {
+	margin:0px;
+	padding:0px;
+}
+
+li {
+	list-style:square;
+	font-family:Helvetica;
+	font-weight:100;
+	color:#2F2D2C;
+	line-height:1.25em;
+	margin:0em;
+	padding:0em;
+	margin:0.313em 0em 0.313em 0em;
+}
+section ul li a img#oben {
+	width:90%;
+	height:auto;
+	max-width:100%;
+}
+a {
+	text-decoration: none;
+}
+/* Navigations-Leiste */
+nav {
+	display:;
+	height:2.5em;
+	text-align:center;
+}
+nav ul {
+	display:block;
+}
+nav ul li {
+	display:inline;
+	margin:0em 0.188em 0em 0.188em;
+}
+nav ul li a {
+	color:#FFFFFF;
+	font-size: 1.125em;
+	line-height:2.5em;
+    text-shadow: 0 0 5px black;
+	padding:0.563em 0.938em 0.375em 0.983em;
+	transition:background 0.2s;
+	-webkit-transition:background 0.2s;
+    
+}
+
+nav ul li a:hover {
+	border-bottom: 0.188em solid #E7590B;
+}
+
+nav ul li a:active {
+	background:#DBD9D8;
+}
+
+
+
+/* Für die mobile Ansicht benötigte Leiste */
+#menubar {
+	display:block;
+	background:#4bc8c8;
+    background-image: url(images/title.png);
+    background-position: center;
+    background-repeat: no-repeat;
+ /* Logo rechts
+    border-image: url(images/penguin.png) 0 50 50 0 stretch repeat;
+    border-image-width:auto; */
+   	line-height: 35px;
+	height: 45px; 
+} 
+
+.homebutton {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
+.homebutton:active {
+    border-image: url(icons/android-chrome-36x36.png) 0 0 0 0 stretch repeat;
+    border-image-width:auto;
+}
+
+#menubar ul {
+	display:block;
+	width:2em;
+	padding:0.9em;
+}
+#menubar ul li {
+	display:inline;
+}
+#menubar ul li a.menubutton {
+	display:none;
+}
+
+
+/* Content Bereich */ 
+#main {
+	display:block;
+	width:96%;
+	max-width:980px;
+	margin:1.25em auto;
+	padding:0em;
+}
+
+#main article {
+	display:inline-block; 
+	width:65.3%; 
+	background:rgba(255, 255, 255, 0.83);
+	vertical-align: top;
+	margin:0em 0em 3em 0em;
+	padding:0em;
+	text-align:center;
+}
+
+
+
+#main aside {
+	display:inline-block;
+	width:30.6%;
+	margin-left:3%; 
+	padding:0em;
+	vertical-align:top;
+}
+
+#main aside section {
+    display: block;
+	margin-bottom:1.563em;
+	background:rgba(255, 255, 255, 0.83);
+	border-bottom: 0.188em solid #E7590B;
+}
+
+#main article h2 {
+	padding:1em 1.8em 1em 1.8em;
+}
+
+#main aside section ul {
+	padding:0em 1.875em 1.25em 2.5em;
+}
+#main article form
+{
+display: inline-block;
+
+}
+
+/* Footer & Header chat*/ 
+footer{
 	display: block;
 	position: fixed;
 	top: 0;
@@ -35,7 +187,8 @@ header, footer{
 	right: 0;
 	bottom: auto;
 	padding: 0 10px;
-	background-color: #4bc8c8;
+	
+   background:#4bc8c8;
 	font-size: 24px;
 	line-height: 35px;
 	height: 45px;
@@ -43,16 +196,198 @@ header, footer{
 }
 header{
 	font-weight: bold;
+    position: relative;
 }
 footer{
+    display: block;
 	top: auto;
 	bottom: 0;
+    z-index: 2;
 }
 input{
+    display: block;
     font-family: "Comic Sans MS";
 	font-size: 14px;
 }
 #content{
-	margin: 48px;
+	
 	list-style: none;
+    height: 7.5em;
+    overflow: auto;
+   background-color: lightcyan;
 }
+#senden {
+margin-left: 14em;
+    margin-top: -1.6em;
+}
+#name{
+margin-top: 0.5em;
+}
+/* Filetransfer*/
+.alert img {
+                float:left;
+                padding-right: 10px;
+            }
+
+            .peerblock {
+                width: 800px;
+                border-radius:2px;
+                border:1px solid gray;
+            }
+
+            .receiveBlock {
+                width: 500px;
+                margin:10px;
+                display: inline-block;
+            }
+            .dragndrop {
+                display: inline-block;
+                padding:2em;
+                margin: 2px;
+                border:2px solid black;
+                border-radius: 5px;
+            }
+            .dragndropStatus {
+                display: inline-block;
+            }
+            .connecting {
+                background-color: yellow;
+            }
+            .usesSockets {
+                background-color: pink;
+            }
+            .notConnected {
+                visibility:hidden;
+            }
+            .connected {
+                background-color: #e0ffe0;
+            }
+            .notConnected:hover {
+                margin: 1px;
+                border-width: 3px;
+            }
+            .connected:hover {
+                margin: 1px;
+                border-width:3px;
+            }
+            .connectButton {
+                padding:2em;
+            }
+#upload {
+    
+    width: 100%;
+    
+
+}
+
+/*WebRTC CSS*/
+
+.videoContainer {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                z-index: 0;
+                
+            }
+            .videoContainer1 {
+                position: absolute;
+                width: 20%;
+                height: 20%;
+                
+                z-index: 1;
+                bottom: 1%;
+                right: 5%;
+               
+                
+            }
+            .parent{
+            position: relative;
+                width: 100%;
+                height: 22.5em;
+               
+             }
+            .videoContainer1 video {
+              margin: 0px auto;
+                
+                width: 100%;
+                height: 100%;
+                
+            }
+            .videoContainer video {
+                margin: 0px auto;
+                
+                width: 100%;
+                height: 100%;
+            }
+            .volume_bar {
+                position: absolute;
+                width: 0.313em;
+                height: 0px;
+                right: 0px;
+                bottom: 0px;
+                background-color: #12acef;
+            }
+.fileList{
+  overflow: auto;
+    height: 4.5em;
+}
+            
+/* Responsive Design*/
+@media screen and (max-width:800px) {
+	body {
+		font-size:90%;
+	}
+     
+}
+@media screen and (max-width:600px) {
+	#main aside, #main article {
+		width:100%;
+		display:block;
+		margin:0.625em 0em 0.625em 0em;
+	}
+    #main article h2{
+        padding:0em;
+    
+    }
+}
+
+@media screen and (max-width:550px) {
+	body {
+		font-size:86%;
+	}
+	#menubar ul li a.menubutton {
+		display:block;
+	}	
+	nav {
+		display:none;
+		height:auto;
+	}
+	nav ul li {
+		display:block;
+		margin:0.3em 0em 0.3em 0em;
+	}
+   footer input {
+    display: none;
+    
+    }
+    #main aside section#filetransfer {
+    display: none;
+    margin-bottom: 6em;
+    }
+    #main aside section#chatroom {
+    display: none;
+    margin-bottom: 6em;
+    
+    }
+    body footer{
+        display: none;
+  
+    }
+    
+    footer input#senden{
+    vertical-align: middle;
+    }
+ 
+}
+        
+        
